@@ -1,17 +1,45 @@
 .feedback__text {
     font-size: 24px;
-    line-height: 120%;
+    line-height: 29px;
     font-weight: 300;
+    text-align: center;
 }
 
 .feedback__term {
     font-size: 18px;
     line-height: auto;
+    text-align: center;
 }
 
 .feedback__definition {
     font-size: 24px;
     line-height: auto;
     font-weight: 300;
+    margin: 0;
     color: @pink;
+    text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+	.feedback__text {
+		font-size: 40px;
+	    line-height: 54px;
+	}
+
+	.feedback__list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.feedback__text {
+		font-size: 50px;
+	    line-height: 68px;
+	}
+
+	.feedback__order-end {
+		order: 3;
+	}
 }

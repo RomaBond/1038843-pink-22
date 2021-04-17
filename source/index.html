@@ -8,13 +8,17 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-img" src="img/pink.png" width="74" height="23" alt="Логотип Пинк">
-      </a>
-      <nav class="main-nav">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo" href="#">
+          <img class="page-header__logo-img logo-mobile" src="img/pink.png" width="74"   height="23" alt="Логотип Пинк">
+          <img class="page-header__logo-img logo-tablet" src="img/logo-tablet.png" width="145px" height="40px" alt="Логотип Пинк">
+          <img class="page-header__logo-img logo-desktop" src="img/logo-desktop.png" width="147px" height="40px">
+        </a>
         <button class="main-nav__toggle main-nav__toggle--active" type="button">
-          <span class="visually-hedden">Открыть меню</span>
+            <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>  
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -71,34 +75,43 @@
           <h2 class="visually-hidden">Преимущества приложения</h2>
           <p class="advantages__text">Устали от серости мегаполиса?</p>
           <p class="advantages__paragraph">Нам есть что вам предложить!</p>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <h3 class="advantages__title">Поднимает настроение</h3>
-              <p class="advantages__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-          <div class="advantages__benefits">
-            <img class="advantages__pic" src="" width="157" height="320" alt="iPhone 3">
+          <div class="advantages__mod-block">
+            <div class="advantages__tablet-block">
+              <img class="advantages__tablet-img" src="#" width="268" height="547" alt="iPhone 3">
+            </div>
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <img class="advantages__desktop-img" src="#" width="186" height="382" alt="iPhone 3">
+                <h3 class="advantages__title">Поднимает настроение</h3>
+                <p class="advantages__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </li>
+              <li class="advantages__item">
+                <img class="advantages__desktop-img" src="#" width="186" height="382" alt="iPhone 3">
+                <h3 class="advantages__title">Меняет мир вокруг</h3>
+                <p class="advantages__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="advantages__item">
+                <img class="advantages__desktop-img" src="#" width="186" height="382" alt="iPhone 3">
+                <h3 class="advantages__title">Заводит новых друзей</h3>
+                <p class="advantages__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+            <div class="advantages__benefits">
+              <img class="advantages__pic" src="#" width="157" height="320" alt="iPhone 3">
+            </div>
           </div>
         </div>
       </section>
       <section class="feature">
         <div class="feature__wrapper">
           <div class="feature__widget">
-              <img class="feature__pic" src="">
+              <img class="feature__pic-tablet" src="#" width="238" height="276">
+              <img class="feature__pic-desktop" src="#" width="298" height="345">
           </div>
           <div class="feature__content">
             <p class="feature__caption-text"><b>Эффект на 24 часа!</b></p>
             <p class="feature__text">Британские ученые провели исследования и доказали что положительный эффект от использования приложения длится целые сутки!</p>
-            <p class="feature__paragraph"><a href="#">Узнать больше об иследовании</a>p>
+            <p class="feature__paragraph"><a class="feature__link" href="#">Узнать больше об иследовании</a></p>
           </div>
         </div>
       </section>
@@ -106,25 +119,49 @@
         <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы о нас</h2>
           <div class="reviews__list slider__list">
+            <div class="reviews__block-pic">
+              <img class="reviews__pic" src="#" width="79" height="63" alt="Иконка отзыва">
+            </div>
             <blockquote class="reviews__item slider__item">
+              <div class="reviews__block-button">
+                <button class="reviews__button"></button>
+              </div>
               <div class="reviews__author-info">
+                <cite class="reviews__author-name-mobile">Николай Петров</cite>
+                <p class="reviews__paragraph">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
                 <cite class="reviews__author-name">Николай Петров</cite>
                 <p class="reviews__text">25 лет, водитель трамвая</p>
-                <p class="reviews__paragraph">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </div>
+              <div class="reviews__block-button">
+                <button class="reviews__button"></button>
               </div>
             </blockquote>
-            <blockquote class="reviews__item">
+            <blockquote class="reviews__item reviews-block-hidden">
+              <div class="reviews__block-button">
+                <button class="reviews__button"></button>
+              </div>
               <div class="reviews__author-info">
+                <cite class="reviews__author-name-mobile">Николай Петров</cite>
+                <p class="reviews__paragraph">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
                 <cite class="reviews__author-name">Николай Петров</cite>
                 <p class="reviews__text">25 лет, водитель трамвая</p>
-                <p class="reviews__paragraph">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </div>
+              <div class="reviews__block-button">
+                <button class="reviews__button"></button>
               </div>
             </blockquote>
-            <blockquote class="reviews__item">
+            <blockquote class="reviews__item reviews-block-hidden">
+              <div class="reviews__block-button">
+                <button class="reviews__button"></button>
+              </div>
               <div class="reviews__author-info">
+                <cite class="reviews__author-name-mobile">Николай Петров</cite>
+                <p class="reviews__paragraph">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
                 <cite class="reviews__author-name">Николай Петров</cite>
                 <p class="reviews__text">25 лет, водитель трамвая</p>
-                <p class="reviews__paragraph">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              </div>
+              <div class="reviews__block-button">
+                <button class="reviews__button"></button>
               </div>
             </blockquote>
           </div>
@@ -167,7 +204,7 @@
               </td>
             </tr>
             <tr class="rates__row">
-              <td>
+              <td class="rates__cell">
                 <p class="rates__text">Смайлики</p>
               </td>
               <td class="rates__cell"></td>
@@ -190,12 +227,18 @@
           <h2 class="visually-hidden">Обратная связь</h2>
           <p class="feedback__text">Остались вопросы? Свяжитесь с нами!</p>
           <dl class="feedback__list">
-            <dt class="feedback__term">Звоните:</dt>
-            <dd class="feedback__definition">+7 (812) 555-66-66</dd>
-            <dt class="feedback__term">Пишите:</dt>
-            <dd class="feedback__definition">mail@htmlacademy.ru</dd>
-            <dt class="feedback__term">Приезжайте в гости:</dt>
-            <dd class="feedback__definition">ул. Большая Конюшенная, 19/8</dd>
+            <div class="feedback__block-list">
+              <dt class="feedback__term">Звоните:</dt>
+              <dd class="feedback__definition">+7 (812) 555-66-66</dd>
+            </div>
+            <div class="feedback__block-list feedback__order-end">
+              <dt class="feedback__term">Пишите:</dt>
+              <dd class="feedback__definition">mail@htmlacademy.ru</dd>
+            </div>
+            <div class="feedback__block-list">
+              <dt class="feedback__term">Приезжайте в гости:</dt>
+              <dd class="feedback__definition">ул. Большая Конюшенная, 19/8</dd>
+            </div>
           </dl>
         </div>
       </section>
@@ -209,7 +252,6 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <img class="page-footer__glasses-img" src="glasses-footer.png" width="59" height="40" alt="Логотип Пинк">
-          <img class="page-footer__text-img" src="pink-footer.png" width="74" height="23" alt="Логотип Пинк">
         </div>
         <div class="page-footer__social">
           <ul class="page-footer__list">
@@ -220,7 +262,6 @@
         </div>
         <div class="page-footer__copyright">
           <span class="page-footer__developed">Разработано</span>
-
         </div>
       </div>
     </footer>
