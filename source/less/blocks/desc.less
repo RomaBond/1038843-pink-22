@@ -6,7 +6,29 @@
 
 .desc__text {
   font-size: 24px;
-  line-height: auto;
+  line-height: 33px;
   color: @white;
   font-weight: 300;
+}
+
+
+@media (min-width: @tablet-width) {
+	.desc {
+		background: @pink url(../img/back-tablet.jpg) no-repeat center;
+		width: 600px;
+		height: 729px;
+	}
+
+	.desc__text {
+		font-size: 50px;
+		line-height: 68px;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.desc {
+		background: @pink url(../img/back-desktop.jpg) no-repeat center;
+		width: 1200px;
+		height: 853px;
+	}
 }

@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -177,7 +178,7 @@
           <h2 class="visually-hidden">Тарифы</h2>
           <table class="rates__table">
             <tr class="rates__row">
-              <th class="rates__caption">
+              <th class="rates__caption visibility-caption">
               </th>
               <th class="rates__caption">
                 <b class="rates__subtitle">База</b>
@@ -193,33 +194,89 @@
               </th>
             </tr>
             <tr class="rates__row">
-              <td class="rates__cell">
+              <td class="rates__cell visibility-cell">
                 <p class="rates__text">Розовый фильтр</p>
               </td>
               <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Розовый фильтр</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-yes">
+                  </svg>
+                </span>
               </td>
               <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Розовый фильтр</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-yes">
+                  </svg>
+                </span>
               </td>
               <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Розовый фильтр</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-yes">
+                  </svg>
+                </span>
               </td>
             </tr>
             <tr class="rates__row">
-              <td class="rates__cell">
+              <td class="rates__cell visibility-cell">
                 <p class="rates__text">Смайлики</p>
               </td>
-              <td class="rates__cell"></td>
-              <td class="rates__cell"></td>
-              <td class="rates__cell"></td>
+              <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Смайлики</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-not">
+                  </svg>
+                </span>
+              </td>
+              <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Смайлики</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-yes">
+                  </svg>
+                </span>
+              </td>
+              <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Смайлики</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-yes">
+                  </svg>
+                </span>
+              </td>
             </tr>
             <tr class="rates__row">
-              <td class="rates__cell">
+              <td class="rates__cell visibility-cell">
                 <p class="rates__text">Комментарии</p>
               </td>
-              <td class="rates__cell"></td>
-              <td class="rates__cell"></td>
-              <td class="rates__cell"></td>
+              <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Комментарии</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-yes">
+                  </svg>
+                </span>
+              </td>
+              <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Комментарии</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-not">
+                  </svg>
+                </span>
+              </td>
+              <td class="rates__cell">
+                <p class="rates__text rates__text-hidden">Комментарии</p>
+                <span class="rates__element-pic">
+                  <svg class="class__item-not">
+                  </svg>
+                </span>
+              </td>
             </tr>
           </table>
+          <p class="rates__toggles">
+            <button class="slider__toggle slider__toggle--current" type="button"></button>
+            <button class="slider__toggle" type="button"></button>
+            <button class="slider__toggle" type="button"></button>
+          </p>
         </div>
       </section>
       <section class="feedback">
@@ -251,7 +308,8 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img class="page-footer__glasses-img" src="glasses-footer.png" width="59" height="40" alt="Логотип Пинк">
+          <img class="page-footer__logo" src="img/logo-footer.png" width="145" height="40" alt="Логотип Пинк">
+          <img class="page-footer__logo-desktop" src="img/logo-footer-desktop.png" width="147" height="40" alt="Логотип Пинк">
         </div>
         <div class="page-footer__social">
           <ul class="page-footer__list">

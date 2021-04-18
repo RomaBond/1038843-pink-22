@@ -37,3 +37,40 @@
     color: @black-light;
     font-weight: 400;
 }
+
+.rates__toggles {
+    text-align: center;
+}
+
+.visibility-caption {
+    visibility: hidden;
+}
+
+.visibility-cell {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .visibility-cell {
+        display: table-cell;
+    }
+
+    .rates__text-hidden,
+    .rates__toggles {
+        display: none;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .rates__subtitle {
+        font-size: 18px;
+    }
+
+    .rates__price {
+        font-size: 24px;
+    }
+
+    .rates__text {
+        font-size: 18px;
+    }
+}

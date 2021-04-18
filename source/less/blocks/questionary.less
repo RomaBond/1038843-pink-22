@@ -24,6 +24,7 @@
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
+    color: inherit;
 }
 
 .questionary__caption-progress,
@@ -43,4 +44,132 @@
     background-color: @green;
     border: 2px solid @green;
     border-radius: 1px;
+}
+
+.questionary__group-progress,
+.questionary__group-app {
+    background-color: @back-grey;
+    border: none;
+}
+
+.questionary__group-contacts,
+.questionary__group-comment {
+    border: none;
+}
+
+.questionary__group-contacts,
+.questionary__group-comment {
+    text-align: center;
+}
+
+.questionary__caption-contacts {
+    display: none;
+}
+
+.questionary__caption-app,
+.questionary__caption-progress {
+    text-align: center;
+}
+
+.questionary__block-named {
+    display: flex;
+    flex-direction: column;
+}
+
+.questionary__block-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+    .questionary__desc {
+        font-size: 18px;
+    }
+
+    .questionary__caption-progress {
+        line-height: 30px;
+    }
+
+    .questionary__caption-contacts {
+        display: block;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        color: @pink;
+    }
+
+    .questionary__group-progress,
+    .questionary__group-contacts,
+    .questionary__group-app,
+    .questionary__group-comment {
+        background-color: @white;
+        border-width: 2px;
+        border-style: groove;
+        border-color: threedface;
+        border-image: initial;
+    }
+
+    .questionary__caption-app,
+    .questionary__caption-comment {
+        line-height: 30px;
+    }
+
+    .questionary__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .questionary__group-named {
+        order: 1;
+    }
+
+    .questionary__group-app {
+        order: 2;
+    }
+
+    .questionary__group-contacts {
+        order: 3;
+    }
+
+    .questionary__group-progress {
+        order: 4
+    }
+
+    .questionary__group-comment {
+        order: 5;
+    }
+
+    .questionary__block-bottom {
+        order: 6;
+    }
+
+    .questionary__block-named {
+        display: block;
+    }
+
+    .questionary__contacts-label {
+        order: 1;
+    }
+
+    .questionary__block-bottom {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .questionary__double-block-progress {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .questionary__group-progress {
+        display: flex;
+        justify-content: center;
+    }
+
+    .questionary__group-contacts {
+        display: flex;
+        justify-content: center;
+    }
 }
