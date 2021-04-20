@@ -19,6 +19,7 @@
   font-size: 18px;
   line-height: 18px;
   color: @white;
+  text-decoration: none;
 }
 
 .device__paragraph {
@@ -26,4 +27,46 @@
   font-weight: 300;
   line-height: 24px;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .device {
+    background: @pink url(../img/back-tablet.jpg) no-repeat center;
+    width: 660px;
+    height: 729px;
+  }
+
+  .device__content {
+    background: inherit;
+  }
+
+  .device__text {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .device__paragraph {
+    font-size: 18px;
+  }
+
+  .device__widget {
+    background-color: inherit;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .device {
+    background: @pink url(../img/back-desktop.jpg) no-repeat center;
+    width: 1200px;
+    height: 853px;
+  }
+
+  .device__text {
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  .device__button {
+    font-size: 21px;
+  }
 }

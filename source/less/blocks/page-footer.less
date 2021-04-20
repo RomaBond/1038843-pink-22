@@ -9,9 +9,23 @@
 	flex-direction: column;
 }
 
+.page-footer__logo-desktop {
+	display: none;
+}
+
 @media (min-width: @tablet-width) {
 	.page-footer__wrapper {
 		flex-direction: row;
 		justify-content: space-around;
+	}
+}
+
+@media (min-width: @desktop-width) {
+	.page-footer__logo {
+		display: none;
+	}
+
+	.page-footer__logo-desktop {
+		display: block;
 	}
 }
