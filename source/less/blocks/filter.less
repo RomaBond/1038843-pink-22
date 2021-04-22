@@ -2,6 +2,7 @@
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
+    text-align: center;
 }
 
 .filter__button-post {
@@ -27,4 +28,45 @@
 
 .filter__content {
     background-color: @white;
+}
+
+.filter__pic-tab-desk {
+    display: none;
+}
+
+.filter__button {
+    display: flex;
+    flex-direction: column;
+}
+
+.range-hidden {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .filter__text {
+        font-size: 18px;
+    }
+
+    .filter__pic-tab-desk {
+        display: initial;
+    }
+
+    .filter__pic-mobile {
+        display: none;
+    }
+
+    .filter__wrapper-regulate {
+        display: flex;
+    }
+
+    .range-hidden {
+        display: block;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .filter__button {
+        flex-direction: initial;
+    }
 }

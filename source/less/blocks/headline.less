@@ -1,6 +1,6 @@
 .main-title {
     font-size: 24px;
-    line-height: auto;
+    line-height: 33px;
     font-weight: 300;
     color: @white;
 }
@@ -15,4 +15,30 @@
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
+    text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+    .main-title {
+        font-size: 50px;
+        line-height: 68px;
+    }
+
+    .headline-text {
+        font-size: 18px;
+    }
+
+    .headline__block-area {
+        background: @pink url(../img/back-tablet.jpg) no-repeat center;
+        width: 660px;
+        height: 729px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .headline__block-area {
+      background: @pink url(../img/back-desktop.jpg) no-repeat center;
+      width: 1200px;
+      height: 853px;
+    }
 }
