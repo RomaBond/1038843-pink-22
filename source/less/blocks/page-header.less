@@ -1,6 +1,7 @@
 .page-header {
 	background-color: @black-light;
 	min-height: 325px;
+	margin: 0;
 }
 
 .main-nav__link {
@@ -8,6 +9,7 @@
     line-height: 32px;
     color: @white;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .main-nav__list {
@@ -21,6 +23,38 @@
 .page-header__logo-wrapper {
 	display: flex;
 	justify-content: space-between;
+}
+
+.page-header__logo {
+	margin-left: 20px;
+	margin-top: 23px;
+	margin-bottom: 23px;
+}
+
+.main-nav__toggle {
+	align-self: center;
+	margin-right: 24px;
+}
+
+.main-nav__item {
+	padding: 13px;
+	width: 100%;
+	text-align: center;
+	box-shadow: 
+	0px 1px 0px #000000,
+    inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+}
+
+.main-nav__item:nth-child(2) {
+	padding: 19px;
+}
+
+.main-nav__item:nth-child(3) {
+	padding: 14px;
+}
+
+.main-nav__item:nth-child(4) {
+	padding: 17px;
 }
 
 .logo-tablet,
