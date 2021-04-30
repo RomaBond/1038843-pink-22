@@ -14,11 +14,12 @@
 .device__content {
   background: @pink url(../img/back-mobile.jpg) no-repeat 50% -67px;
   width: 320px;
-  height: 395px;
+  min-height: 395px;
 }
 
 .device__widget {
   background-color: @back-dark-grey;
+  padding-bottom: 17px;
 }
 
 .device__block-button {
@@ -37,7 +38,7 @@
 }
 
 .device__list {
-  margin-top: 56px;
+  margin-top: 50px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -45,16 +46,17 @@
 }
 
 .device__item:nth-child(1) {
-  margin-left: 60px;
+  margin-left: 58px;
 }
 
 .device__item:nth-child(2) {
-  margin-left: 33px;
+  margin-left: 35px;
+  margin-top: 6px;
 }
 
 .device__item:nth-child(3) {
   margin-left: 35px;
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 .device__paragraph {
@@ -65,15 +67,15 @@
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0;
+  margin-top: 18px;
   text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .device {
-    background: @pink url(../img/back-tablet.jpg) no-repeat center;
+    background: @pink url(../img/back-tablet.jpg) no-repeat 50% -111px;
     width: 660px;
-    height: 729px;
+    min-height: 660px;
   }
 
   .device__content {
