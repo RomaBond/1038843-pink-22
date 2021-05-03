@@ -1,28 +1,47 @@
 .rates {
     background-color: @back-grey;
+    padding-top: 50px;
 }
-
+/*
+.rates::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 33px solid white; 
+    border-right: 320px solid transparent;
+}
+*/
 .rates__table {
+    position: relative;
     border: 2px solid #E5E5E5;
     border-collapse: collapse;
-    margin: 0 auto;
-    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 .rates__caption {
     border: 2px solid #E5E5E5;
     background-color: @black-light;
+    width: 276px;
+    min-height: 94px;
 }
 
 .rates__cell {
     border: 2px solid #E5E5E5;
     background-color: @white;
+    width: 276px;
+    min-height: 59px;
+    display: flex;
 }
 
 .rates__subtitle {
     font-size: 16px;
     line-height: 30px;
     color: @white;
+    text-transform: uppercase;
 }
 
 .rates__price {
@@ -37,6 +56,7 @@
     line-height: 30px;
     color: @black-light;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 .rates__toggles {
@@ -44,7 +64,7 @@
 }
 
 .visibility-caption {
-    visibility: hidden;
+    display: none;
 }
 
 .visibility-cell {
@@ -54,6 +74,11 @@
 @media (min-width: @tablet-width) {
     .visibility-cell {
         display: table-cell;
+    }
+
+    .visibility-caption {
+      display: initial;
+      visibility: hidden;
     }
 
     .rates__text-hidden,
