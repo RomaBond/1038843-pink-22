@@ -1,6 +1,6 @@
 .rates {
     background-color: @back-grey;
-    padding-top: 50px;
+    padding-top: 99px;
 }
 /*
 .rates::before {
@@ -22,19 +22,51 @@
     width: 100%;
 }
 
+.rates__caption-hit {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    transform: rotate(-45deg);
+    z-index: 5;
+    right: 132px;
+}
+
+.rates__caption-svg {
+    position: relative;
+}
+
+.rates__caption-svg-element {
+    position: absolute;
+    top: -15px;
+    right: 99px;
+}
+
 .rates__caption {
     border: 2px solid #E5E5E5;
     background-color: @black-light;
-    width: 276px;
-    min-height: 94px;
+    padding: 0 85px 7px 85px;
 }
 
 .rates__cell {
     border: 2px solid #E5E5E5;
     background-color: @white;
-    width: 276px;
-    min-height: 59px;
+    /*padding: 19px 17px 19px 20px;*/
+}
+
+.rates__caption-wrapper {
     display: flex;
+    flex-direction: column;
+}
+
+.rates__cell-wrapper {
+    display: flex;
+}
+
+.rates__element-pic {
+    align-self: center;
 }
 
 .rates__subtitle {
