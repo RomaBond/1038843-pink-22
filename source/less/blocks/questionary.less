@@ -1,3 +1,19 @@
+.questionary {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 8;
+    background-color: @white;
+    top: 170px;
+    padding-top: 44px;
+}
+
+.questionary__desc {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .questionary__desc,
 .questionary__prompt {
     font-size: 14px;
@@ -11,6 +27,21 @@
     line-height: 30px;
     font-weight: 400;
     color: @pink;
+    text-transform: uppercase;
+}
+
+.questionary__named-label {
+  margin-left: 31px;
+}
+
+.questionary__named-text {
+  border: 2px solid @bord-col;
+  border-radius: 1px;
+  padding: 14px 20px;
+  padding-bottom: 15px;
+  margin-top: 5px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .questionary__contacts-input[value="Номер, пожалуйста"],
@@ -48,6 +79,8 @@
 
 .questionary__group-named {
     margin: 0;
+    border: none;
+    padding-top: 35px;
 }
 
 .questionary__group-progress,
@@ -57,6 +90,10 @@
     margin: 0;
 }
 
+.questionary__group-progress {
+  padding-top: 0;
+}
+
 .questionary__group-contacts,
 .questionary__group-comment {
     border: none;
@@ -68,18 +105,36 @@
     text-align: center;
 }
 
-.questionary__caption-contacts {
+.questionary__caption-contacts,
+.questionary-text-hidden {
     display: none;
 }
 
 .questionary__caption-app,
 .questionary__caption-progress {
     text-align: center;
+    text-transform: uppercase;
+}
+
+.questionary__caption-progress {
+  
+  width: 100%;
+  background-color: @back-grey;
+
 }
 
 .questionary__block-named {
     display: flex;
     flex-direction: column;
+}
+
+.questionary__block-named:nth-child(2) {
+  margin-top: 17px;
+}
+
+.questionary__block-named:nth-child(3) {
+  margin-top: 17px;
+  margin-bottom: 14px;
 }
 
 .questionary__block-contacts {
@@ -88,8 +143,18 @@
 }
 
 @media (min-width: @tablet-width) {
+    .questionary {
+        top: 329px;
+        padding-top: 91px;
+    }
+
     .questionary__desc {
         font-size: 18px;
+        width: 80%;
+    }
+
+    .questionary-text-hidden {
+        display: initial;
     }
 
     .questionary__caption-progress {
@@ -128,6 +193,30 @@
 
     .questionary__group-named {
         order: 1;
+        padding-top: 67px;
+        width: 100%;
+    }
+
+    .questionary__block-named:nth-child(2) {
+        margin-top: 47px;
+    }
+
+    .questionary__block-named:nth-child(2) .questionary__named-text {
+        margin-left: 15px;
+        padding-right: 338px;
+    }
+
+    .questionary__block-named:nth-child(3) {
+        margin-top: 47px;
+    }
+
+    .questionary__named-label {
+        margin-left: 20px;
+    }
+
+    .questionary__named-text {
+        margin-left: 14px;
+        padding-right: 298px;
     }
 
     .questionary__group-app {
@@ -169,6 +258,14 @@
 }
 
 @media (min-width: @desktop-width) {
+    .questionary {
+        top: 394px;
+    }
+
+    .questionary__desc {
+        width: 65%;
+    }
+
     .questionary__form {
         flex-direction: row;
         justify-content: center;

@@ -1,8 +1,9 @@
 .page-header {
 	background-color: @black-light;
 	min-height: 325px;
-	margin: 0;
+	margin: 0 auto;
 	position: relative;
+	max-width: 1200px;
 }
 
 .main-nav__link {
@@ -60,6 +61,7 @@
 }
 
 .main-nav__item {
+	list-style: none;
 	padding: 13px;
 	width: 100%;
 	text-align: center;
@@ -102,25 +104,73 @@
 	.main-nav {
 		margin-top: 22px;
 	}
+
+	.main-nav__toggle::before,
+    .main-nav__toggle::after {
+    	top: 39px;
+    }
 }
 
 @media (min-width: @desktop-width) {
+    .page-header {
+    	display: flex;
+    	min-height: 110px;
+    	position: absolute;
+    	z-index: 7;
+    	left: 0;
+    	right: 0;
+    	background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .page-header__logo-wrapper {
+    	margin-left: 130px;
+    }
+
+    .main-nav {
+    	width: 55%;
+    	margin-left: 173px;
+    	margin-top: 45px;
+    }
+
 	.main-nav__list {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.main-nav__item {
+		box-shadow: none;
+		padding: 0;
+		width: initial;
+	}
+
+	.main-nav__item:nth-child(2) {
+		padding: 0;
+		margin-left: 78px;
+	}
+
+	.main-nav__item:nth-child(3) {
+		padding: 0;
+		margin-left: 79px;
+	}
+
+	.main-nav__item:nth-child(4) {
+		padding: 0;
+		margin-left: 80px;
 	}
 
 	.main-nav__link {
         font-size: 18px;
         line-height: 18px;
         font-weight: 400;
+        text-transform: initial;
     }
 
-    .page-header {
-    	display: flex;
-    	justify-content: space-between;
-    	min-height: 110px;
+    .page-header__logo {
+    	margin-left: 0;
+    	margin-top: 27px;
     }
+
+    
 
 	.logo-desktop{
 		display: block;

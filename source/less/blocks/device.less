@@ -1,3 +1,8 @@
+.device {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .device__text {
   font-size: 24px;
   line-height: 29px;
@@ -75,20 +80,46 @@
   .device {
     background: @pink url(../img/back-tablet.jpg) no-repeat 50% -111px;
     width: 660px;
-    min-height: 660px;
+    min-height: 618px;
+  }
+
+  .device__img {
+    display: none;
   }
 
   .device__content {
     background: inherit;
+    min-height: initial;
   }
 
   .device__text {
     font-size: 40px;
     line-height: 48px;
+    padding-top: 93px;
+    margin-bottom: 0;
+    margin-left: 50px;
+  }
+
+  .device__button {
+    padding: 12px 45px;
+  }
+
+  .device__list {
+    margin-top: 63px;
+    margin-left: 9px;
+  }
+
+  .device__block-button {
+    text-align: initial;
+    margin-left: 20px;
+    padding-top: 48px;
   }
 
   .device__paragraph {
     font-size: 18px;
+    width: 50%;
+    margin-left: 5px;
+    margin-top: 30px;
   }
 
   .device__widget {
@@ -103,12 +134,43 @@
     height: 853px;
   }
 
+  .device__content {
+    padding-top: 116px;
+    margin-left: 110px;
+  }
+
   .device__text {
     font-size: 50px;
     line-height: 68px;
   }
 
+  .device__block-button {
+    margin-left: 129px;
+    padding-top: 55px;
+  }
+
   .device__button {
     font-size: 21px;
+    padding: 11px 29px;
+  }
+
+  .device__list {
+    margin-top: 84px;
+    margin-left: 119px;
+  }
+
+  .device__item:nth-child(2) {
+    margin-left: 34px;
+    margin-top: 8px;
+  }
+
+  .device__item:nth-child(3) {
+    margin-left: 37px;
+  }
+
+  .device__paragraph {
+    width: 27%;
+    margin-top: 49px;
+    margin-left: 118px;
   }
 }

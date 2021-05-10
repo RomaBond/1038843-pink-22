@@ -1,8 +1,23 @@
+.preview {
+    position: relative;
+    top: -41px;
+    margin: 0 auto;
+}
+
 .preview__paragraph {
     font-size: 12px;
     line-height: 24px;
     background-color: @red;
     color: @white;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+}
+
+.preview__picture-block {
+    position: relative;
 }
 
 .preview__author {
@@ -64,6 +79,14 @@
 }
 
 @media (min-width: @tablet-width) {
+    .preview {
+        top: -61px;
+    }
+
+    .preview__paragraph {
+        top: 57px;
+    }
+
     .preview__panorama-tablet,
     .preview__pic-tablet {
         display: initial;

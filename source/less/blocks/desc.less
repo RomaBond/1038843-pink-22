@@ -1,7 +1,12 @@
 .desc {
-  background: @pink url(../img/back-mobile.jpg) no-repeat center;
+  background: @pink url(../img/back-mobile.jpg) no-repeat 50% -67px;
   width: 320px;
-  height: 462px;
+  min-height: 395px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
 }
 
 .desc__text {
@@ -9,19 +14,26 @@
   line-height: 33px;
   color: @white;
   font-weight: 300;
+  margin: 0;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 27px;
 }
+
 
 
 @media (min-width: @tablet-width) {
 	.desc {
-		background: @pink url(../img/back-tablet.jpg) no-repeat center;
+		background: @pink url(../img/back-tablet.jpg) no-repeat center -111px;
 		width: 600px;
-		height: 729px;
+		min-height: 729px;
 	}
 
 	.desc__text {
 		font-size: 50px;
 		line-height: 68px;
+		margin-top: 39px;
 	}
 }
 
@@ -30,5 +42,9 @@
 		background: @pink url(../img/back-desktop.jpg) no-repeat center;
 		width: 1200px;
 		height: 853px;
+	}
+
+	.desc__text {
+		margin-top: 142px;
 	}
 }
