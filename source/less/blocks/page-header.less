@@ -1,6 +1,9 @@
 .page-header {
 	background-color: @black-light;
 	min-height: 325px;
+	margin: 0 auto;
+	position: relative;
+	max-width: 1200px;
 }
 
 .main-nav__link {
@@ -8,6 +11,7 @@
     line-height: 32px;
     color: @white;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .main-nav__list {
@@ -21,6 +25,61 @@
 .page-header__logo-wrapper {
 	display: flex;
 	justify-content: space-between;
+}
+
+.page-header__logo {
+	margin-left: 20px;
+	margin-top: 23px;
+	margin-bottom: 23px;
+}
+
+.main-nav__toggle {
+	align-self: center;
+	margin-right: 24px;
+	border: none;
+	background-color: transparent;
+}
+
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+	content: "";
+	position: absolute;
+	height: 30px;
+	width: 4px;
+	background-color: @white;
+	z-index: 5;
+	right: 30px;
+	top: 20px;
+}
+
+.main-nav__toggle::before {
+	transform: rotate(45deg);
+}
+
+.main-nav__toggle::after {
+	transform: rotate(-45deg);
+}
+
+.main-nav__item {
+	list-style: none;
+	padding: 13px;
+	width: 100%;
+	text-align: center;
+	box-shadow: 
+	0px 1px 0px #000000,
+    inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+}
+
+.main-nav__item:nth-child(2) {
+	padding: 19px;
+}
+
+.main-nav__item:nth-child(3) {
+	padding: 14px;
+}
+
+.main-nav__item:nth-child(4) {
+	padding: 17px;
 }
 
 .logo-tablet,
@@ -38,27 +97,80 @@
 	}
 
 	.logo-tablet {
-		display: inline-block;
+		display: block;
+		margin-top: 4px;
 	}
+
+	.main-nav {
+		margin-top: 22px;
+	}
+
+	.main-nav__toggle::before,
+    .main-nav__toggle::after {
+    	top: 39px;
+    }
 }
 
 @media (min-width: @desktop-width) {
+    .page-header {
+    	display: flex;
+    	min-height: 110px;
+    	position: absolute;
+    	z-index: 7;
+    	left: 0;
+    	right: 0;
+    	background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .page-header__logo-wrapper {
+    	margin-left: 130px;
+    }
+
+    .main-nav {
+    	width: 55%;
+    	margin-left: 173px;
+    	margin-top: 45px;
+    }
+
 	.main-nav__list {
 		display: flex;
 		flex-direction: row;
+	}
+
+	.main-nav__item {
+		box-shadow: none;
+		padding: 0;
+		width: initial;
+	}
+
+	.main-nav__item:nth-child(2) {
+		padding: 0;
+		margin-left: 78px;
+	}
+
+	.main-nav__item:nth-child(3) {
+		padding: 0;
+		margin-left: 79px;
+	}
+
+	.main-nav__item:nth-child(4) {
+		padding: 0;
+		margin-left: 80px;
 	}
 
 	.main-nav__link {
         font-size: 18px;
         line-height: 18px;
         font-weight: 400;
+        text-transform: initial;
     }
 
-    .page-header {
-    	display: flex;
-    	justify-content: space-between;
-    	min-height: 110px;
+    .page-header__logo {
+    	margin-left: 0;
+    	margin-top: 27px;
     }
+
+    
 
 	.logo-desktop{
 		display: block;
