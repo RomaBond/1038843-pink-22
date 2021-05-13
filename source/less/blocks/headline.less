@@ -1,4 +1,5 @@
 .main-title {
+    max-width: 1200px;
     font-size: 24px;
     line-height: 33px;
     font-weight: 300;
@@ -22,6 +23,7 @@
     background: @pink url(../img/back-mobile.jpg) no-repeat center -67px;
     width: 320px;
     min-height: 395px;
+    margin: 0 auto;
 }
 
 .headline__block-content {
@@ -31,6 +33,9 @@
     background-color: @white;
     padding-bottom: 36px;
     padding-top: 30px;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .headline-text {
@@ -72,5 +77,21 @@
       background: @pink url(../img/back-desktop.jpg) no-repeat center;
       width: 1200px;
       min-height: 853px;
+    }
+
+    .main-title {
+        margin-top: 170px;
+        width: 40%;
+    }
+
+    .headline__block-content {
+        max-width: 1200px;
+        margin: 64px auto 0;
+        padding-top: 74px;
+        padding-bottom: 72px;
+    }
+
+    .headline-text {
+        width: 50%;
     }
 }

@@ -85,7 +85,6 @@
 
 .questionary__group-progress,
 .questionary__group-app {
-    background-color: @back-grey;
     border: none;
     margin: 0;
 }
@@ -116,11 +115,33 @@
     text-transform: uppercase;
 }
 
-.questionary__caption-progress {
-  
-  width: 100%;
-  background-color: @back-grey;
+.questionary__group-progress-wrapper {
+    background-color: @back-grey;
+    margin-top: 18px;
+    padding-top: 39px;
+}
 
+.questionary__caption-progress {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+.questionary__progress-label {
+    position: relative;
+}
+
+.questionary__progress-checkbox {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.questionary__progress-check {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-image: url(img/checkbox.svg);
 }
 
 .questionary__block-named {
