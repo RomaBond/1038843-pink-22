@@ -67,77 +67,97 @@
                 <input class="questionary__named-text" type="text" name="patronymic" id="patronymic" value="Ну и отчество тоже">
               </div>
           </fieldset>
-          <fieldset class="questionary__group-progress">
-            <legend class="questionary__caption-progress">Ваши безбашенные достижения в путешествии</legend>
-            <div class="questionary__double-block-progress">
-              <div class="questionary__block-progress">
-                <input class="questionary__progress-checkbox" type="checkbox" name="selfie"id="selfie" checked>
-                <label class="questionary__progress-label" for="selfie">Сделал селфи с акулой</label>
+          <div class="questionary__group-progress-wrapper">
+            <fieldset class="questionary__group-progress">
+              <legend class="questionary__caption-progress">Ваши безбашенные достижения в путешествии</legend>
+              <div class="questionary__double-block-progress">
+                <div class="questionary__block-progress">
+                  <input class="questionary__progress-checkbox" type="checkbox" name="selfie" id="shark" checked>
+                  <label class="questionary__progress-label" for="shark">
+                    Сделал селфи с акулой
+                  </label>
+                </div>
+                <div class="questionary__block-progress">
+                  <input class="questionary__progress-checkbox" type="checkbox" name="beach" id="beach" checked>
+                  <label class="questionary__progress-label" for="beach">
+                    Обгорел на пляже
+                  </label>
+                </div>
               </div>
-              <div class="questionary__block-progress">
-                <input class="questionary__progress-checkbox" type="checkbox" name="beach"   id="beach" checked>
-                <label class="questionary__progress-label" for="beach">Обгорел на пляже</label>
+              <div class="questionary__double-block-progress">
+                <div class="questionary__block-progress">
+                  <input class="questionary__progress-checkbox" type="checkbox" name="chuck" id="chuck">
+                  <label class="questionary__progress-label" for="chuck">
+                    Видел Чака Норриса
+                  </label>
+                </div>
+                <div class="questionary__block-progress">
+                  <input class="questionary__progress-checkbox" type="checkbox" name="souvenir" id="surprise">
+                  <label class="questionary__progress-label" for="surprise">
+                    Накупил сувениров
+                  </label>
+                </div>
               </div>
-            </div>
-            <div class="questionary__double-block-progress">
-              <div class="questionary__block-progress">
-                <input class="questionary__progress-checkbox" type="checkbox" name="chuck"   id="chuck">
-                <label class="questionary__progress-label" for="chuck">Видел Чака Норриса</label>
+              <div class="questionary__double-block-progress">
+                <div class="questionary__block-progress">
+                  <input class="questionary__progress-checkbox" type="checkbox" name="tower" id="tower" checked> 
+                  <label class="questionary__progress-label" for="tower">
+                    Удержал башню
+                  </label>
+                </div>
+                <div class="questionary__block-progress">
+                  <input class="questionary__progress-checkbox" type="checkbox" name="hotel" id="hotel">
+                  <label class="questionary__progress-label" for="hotel">
+                    Разгромил отель
+                  </label>
+                </div>
               </div>
-              <div class="questionary__block-progress">
-                <input class="questionary__progress-checkbox" type="checkbox" name="souvenir" id="souvenir">
-                <label class="questionary__progress-label" for="souvenir">Накупил сувениров</label>
+            </fieldset>
+          </div>
+          <div class="questionary__group-contacts-wrapper">
+            <fieldset class="questionary__group-contacts">
+              <legend class="questionary__caption-contacts">Контактная информация</legend>
+              <div class="questionary__block-contacts">
+                <label class="questionary__contacts-label" for="phone">Номер телефона</label>
+                <input class="questionary__contacts-input" type="tel" name="tel" id="phone"pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" value="Номер, пожалуйста">
               </div>
-            </div>
-            <div class="questionary__double-block-progress">
-              <div class="questionary__block-progress">
-                <input class="questionary__progress-checkbox" type="checkbox" name="tower" id="tower" checked>
-                <label class="questionary__progress-label" for="tower">Удержал башню</label>
+              <div class="questionary__block-contacts">
+                <label class="questionary__contacts-label" for="mail">Адрес почты</label>
+                <input class="questionary__contacts-input" type="email" name="email" id="mail" value="Введите почту *" required>
               </div>
-              <div class="questionary__block-progress">
-                <input class="questionary__progress-checkbox" type="checkbox" name="hotel" id="hotel">
-                <label class="questionary__progress-label" for="hotel">Разгромил отель</  label>
+            </fieldset>
+          </div>
+          <div class="questionary__group-app-wrapper">
+            <fieldset class="questionary__group-app">
+              <legend class="questionary__caption-app">С каким приложением путешествовали?</legend>
+              <div class="questionary__block-app">
+                <input class="questionary_app-radio" type="radio" name="app" value="iOS" id="iOS" checked>
+                <label class="questionary_app-label" for="iOS">Pink для iOS</label>
               </div>
-            </div>
-          </fieldset>
-          <fieldset class="questionary__group-contacts">
-            <legend class="questionary__caption-contacts">Контактная информация</legend>
-            <div class="questionary__block-contacts">
-              <label class="questionary__contacts-label" for="phone">Номер телефона</label>
-              <input class="questionary__contacts-input" type="tel" name="tel" id="phone" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" value="Номер, пожалуйста">
-            </div>
-            <div class="questionary__block-contacts">
-              <label class="questionary__contacts-label" for="mail">Адрес почты</label>
-              <input class="questionary__contacts-input" type="email" name="email" id="mail" value="Введите почту *" required>
-            </div>
-          </fieldset>
-          <fieldset class="questionary__group-app">
-            <legend class="questionary__caption-app">С каким приложением путешествовали?</legend>
-            <div class="questionary__block-app">
-              <input class="questionary_app-radio" type="radio" name="app" value="iOS" id="iOS" checked>
-              <label class="questionary_app-label" for="iOS">Pink для iOS</label>
-            </div>
-            <div class="questionary__block-app">
-              <input class="questionary_app-radio" type="radio" name="app" value="Android" id="Android">
-              <label class="questionary_app-label" for="Android">Pink на Android</label>
-            </div>
-            <div class="questionary__block-app">
-              <input class="questionary_app-radio" type="radio" name="app" value="Windows Phone" id="Windows Phone">
-              <label class="questionary_app-label" for="Windows Phone">Windows Phone</label>
-            </div>
-          </fieldset>
-          <fieldset class="questionary__group-comment">
-            <legend class="questionary__caption-comment">Опишите свои эмоции</legend>
-            <div class="questionary__block-comment">
-              <textarea class="questionary__comment-textarea" name="comment" id="comment-field" rows="10" cols="30">Можно прям в красках, не стесняясь в выражениях</textarea>
-            </div>
-          </fieldset>
+              <div class="questionary__block-app">
+                <input class="questionary_app-radio" type="radio" name="app" value="Android" id="Android">
+                <label class="questionary_app-label" for="Android">Pink на Android</label>
+              </div>
+              <div class="questionary__block-app">
+                <input class="questionary_app-radio" type="radio" name="app" value="Windows Phone" id="Windows Phone">
+                <label class="questionary_app-label" for="Windows Phone">Windows Phone</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="questionary__group-comment-wrapper">
+            <fieldset class="questionary__group-comment">
+              <legend class="questionary__caption-comment">Опишите свои эмоции</legend>
+              <div class="questionary__block-comment">
+                <textarea class="questionary__comment-textarea" name="comment" id="comment-field">Можно прям в красках, не стесняясь в выражениях</textarea>
+              </div>
+            </fieldset>
+          </div>
           <div class="questionary__block-bottom">
             <div class="questionary__block-button">
               <input class="questionary__submit-button" type="submit" value="Отправить форму">
             </div>
             <div class="questionary__block-prompt">
-              <span class="questionary__prompt">* - Обязательные поля</span>
+              <span class="questionary__prompt"><span class="questionary__symbol">*</span> &mdash; Обязательные <span class="questionary__warning-desk">для заполнения</span> поля</span>
             </div>
           </div>
         </form>

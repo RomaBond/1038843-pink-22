@@ -21,6 +21,23 @@
     font-weight: 400;
 }
 
+.questionary__block-bottom {
+    margin-top: 35px;
+}
+
+.questionary__block-prompt {
+    text-align: center;
+    margin-top: 34px;
+}
+
+.questionary__prompt {
+    text-transform: uppercase;
+}
+
+.questionary__symbol {
+    color: @pink;
+}
+
 .questionary__contacts-label,
 .questionary__named-label {
     font-size: 14px;
@@ -28,6 +45,10 @@
     font-weight: 400;
     color: @pink;
     text-transform: uppercase;
+}
+
+.questionary__contacts-label {
+    margin-left: 32px;
 }
 
 .questionary__named-label {
@@ -58,6 +79,13 @@
     color: inherit;
 }
 
+.questionary__contacts-input {
+    border: 2px solid @bord-col;
+    border-radius: 1px;
+    padding: 14px 0 15px 20px;
+    margin: 5px 8px 0;
+}
+
 .questionary__caption-progress,
 .questionary__caption-app,
 .questionary__caption-comment {
@@ -65,6 +93,7 @@
     line-height: 18px;
     font-weight: 400;
     color: @pink;
+    text-transform: uppercase;
 }
 
 .questionary__submit-button {
@@ -75,6 +104,9 @@
     background-color: @green;
     border: 2px solid @green;
     border-radius: 1px;
+    text-transform: uppercase;
+    padding: 14px 46px 15px 45px;
+    margin-left: 20px;
 }
 
 .questionary__group-named {
@@ -85,9 +117,13 @@
 
 .questionary__group-progress,
 .questionary__group-app {
-    background-color: @back-grey;
     border: none;
     margin: 0;
+}
+
+.questionary__group-app-wrapper {
+    background-color: @back-grey;
+    padding-top: 39px;
 }
 
 .questionary__group-progress {
@@ -100,13 +136,32 @@
     margin: 0;
 }
 
-.questionary__group-contacts,
+.questionary__group-contacts {
+    padding-bottom: 42px;
+}
+
 .questionary__group-comment {
     text-align: center;
+    margin-top: 38px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.questionary__comment-textarea {
+    border: 2px solid @bord-col;
+    border-radius: 1px;
+    margin-top: 10px;
+    padding-top: 13px;
+    padding-bottom: 124px;
+    padding-left: 20px;
+    width: 90%;
 }
 
 .questionary__caption-contacts,
-.questionary-text-hidden {
+.questionary-text-hidden,
+.questionary__warning-desk {
     display: none;
 }
 
@@ -116,11 +171,105 @@
     text-transform: uppercase;
 }
 
-.questionary__caption-progress {
-  
-  width: 100%;
-  background-color: @back-grey;
+.questionary__group-progress-wrapper {
+    background-color: @back-grey;
+    margin-top: 18px;
+    padding-top: 39px;
+}
 
+.questionary__caption-progress {
+    width: 80%;
+    margin-bottom: 42px;
+}
+
+.questionary__progress-label {
+    position: relative;
+    cursor: pointer;
+}
+
+.questionary__progress-label::before {
+    content: "";
+    position: relative;
+    right: 18px;
+    bottom: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    background-image: url(../img/checkbox.svg);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.questionary__progress-checkbox:checked + .questionary__progress-label::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: -9px;
+    display: block;
+    background-image: url(../img/tick.svg);
+    width: 22px;
+    height: 16px;
+}
+
+.questionary__progress-checkbox {
+    cursor: pointer;
+    display: none;
+}
+
+.questionary__block-progress {
+    margin-left: 27px;
+    margin-bottom: 47px;
+}
+
+.questionary__double-block-progress:last-child .questionary__block-progress:last-child {
+    margin-bottom: 32px;
+}
+
+.questionary_app-radio {
+    cursor: pointer;
+    display: none;
+}
+
+.questionary_app-label {
+    position: relative;
+    cursor: pointer;
+}
+
+.questionary_app-label::before {
+    content: "";
+    position: relative;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 2px solid @bord-col;
+    vertical-align: middle;
+    background-color: @white;
+    cursor: pointer;
+    display: inline-block;
+    left: -29px;
+    top: -1px;
+}
+
+.questionary_app-radio:checked + .questionary_app-label::after {
+    content: "";
+    background-image: url(../img/radio.svg);
+    position: absolute;
+    display: block;
+    left: -16px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+}
+
+.questionary__block-app {
+    margin-top: 30px;
+    margin-left: 37px;
+    margin-bottom: 34px;
+}
+
+.questionary__group-app {
+    padding-bottom: 5px;
 }
 
 .questionary__block-named {
@@ -140,6 +289,11 @@
 .questionary__block-contacts {
     display: flex;
     flex-direction: column;
+    margin-top: 26px;
+}
+
+.questionary__block-contacts:last-child {
+    margin-top: 17px;
 }
 
 @media (min-width: @tablet-width) {
@@ -159,6 +313,9 @@
 
     .questionary__caption-progress {
         line-height: 30px;
+        width: initial;
+        margin-bottom: 41px;
+        padding: 0 31px;
     }
 
     .questionary__caption-contacts {
@@ -167,6 +324,9 @@
         line-height: 30px;
         font-weight: 400;
         color: @pink;
+        text-transform: uppercase;
+        margin: 0 auto;
+        padding: 0 31px;
     }
 
     .questionary__group-progress,
@@ -219,23 +379,117 @@
         padding-right: 298px;
     }
 
-    .questionary__group-app {
+    .questionary__group-app-wrapper {
         order: 2;
+        background-color: inherit;
+        padding-top: 29px;
+        width: 100%;
+        
+    }
+
+    .questionary__group-app {
+        border: 2px solid @bord-col;
+        border-radius: 1px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 9px 50px 16px;
+    }
+
+    .questionary__caption-app {
+       padding: 0 25px;
+    }
+
+    .questionary__block-app {
+        margin-left: 28px;
+    }
+
+    .questionary_app-label::before {
+        left: -20px;
+        top: -2px;
+    }
+
+    .questionary_app-radio:checked + .questionary_app-label::after {
+        top: 5px;
+        left: -7px;
+    }
+
+    .questionary__group-contacts-wrapper {
+      width: 100%;
+      order: 3;
+      margin-top: 52px;
     }
 
     .questionary__group-contacts {
-        order: 3;
-        width: 95%;
+        border: 2px solid @bord-col;
+        border-radius: 1px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 27px;
+    }
+
+    .questionary__block-contacts {
+        margin-top: 19px;
+    }
+
+    .questionary__block-contacts:last-child {
+        margin-top: 24px;
+    }
+
+    .questionary__contacts-label {
+        order: 1;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
+
+    .questionary__group-progress-wrapper {
+        order: 4;
+        background-color: inherit;
+        width: 100%;
+        padding-top: 35px;
     }
 
     .questionary__group-progress {
-        order: 4;
-        width: 95%;
+        margin: 0 20px;
+        border: 2px solid @bord-col;
+        border-radius: 1px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 16px;
+    }
+
+    .questionary__progress-label::before {
+      right: 19px;
+    }
+
+    .questionary__progress-checkbox:checked + .questionary__progress-label::after {
+      left: -10px;
+      bottom: 4px;
+    }
+
+    .questionary__group-comment-wrapper {
+        order: 5;
+        width: 100%;
     }
 
     .questionary__group-comment {
-        order: 5;
-        width: 95%;
+        border: 2px solid @bord-col;
+        border-radius: 1px;
+        margin-top: 53px;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-top: 20px;
+        padding-bottom: 48px;
+    }
+
+    .questionary__caption-comment {
+      padding: 0 37px;
+    }
+
+    .questionary__comment-textarea {
+      padding-top: 14px;
+      padding-bottom: 115px;
     }
 
     .questionary__block-bottom {
@@ -247,13 +501,23 @@
         display: block;
     }
 
-    .questionary__contacts-label {
-        order: 1;
-    }
-
     .questionary__block-bottom {
         display: flex;
-        justify-content: space-around;
+        margin-top: 66px;
+        width: 100%;
+    }
+
+    .questionary__block-button {
+    }
+
+    .questionary__submit-button {
+      padding: 14px 56px 15px 55px;
+    }
+
+    .questionary__block-prompt {
+      margin-left: 138px;
+      margin-top: 0;
+      padding-top: 17px;
     }
 }
 
@@ -273,26 +537,158 @@
         flex-wrap: wrap;
     }
 
+    .questionary__group-progress-wrapper {
+      padding-top: 33px;
+    }
+
+    .questionary__group-progress {
+        display: flex;
+        justify-content: initial;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 8px;
+        margin: 0 130px;
+    }
+
+    .questionary__caption-progress {
+      margin-bottom: 42px;
+    }
+
     .questionary__double-block-progress {
         display: flex;
         flex-direction: column;
     }
 
-    .questionary__group-progress {
-        display: flex;
-        justify-content: center;
+    .questionary__double-block-progress:first-of-type {
+      margin-left: 50px;
+    }
+
+    .questionary__double-block-progress:nth-of-type(2) {
+      margin-left: 50px;
+    }
+
+    .questionary__double-block-progress:last-of-type {
+      margin-left: 47px;
+    }
+
+    .questionary__group-contacts-wrapper {
+      margin-top: 27px;
     }
 
     .questionary__group-contacts {
         display: flex;
         justify-content: center;
+        margin-left: 130px;
+        margin-right: 130px;
+        padding-left: 23px;
+        padding-right: 23px;
+        padding-bottom: 13px;
+    }
+
+    .questionary__block-contacts {
+      margin-top: 17px;
+      width: 100%;
+    }
+
+    .questionary__block-contacts:last-child {
+      margin-top: 17px;
+    }
+
+    .questionary__block-contacts .questionary__contacts-input {
+      margin-right: 36px;
+      margin-left: 35px;
+    }
+
+    .questionary__block-contacts:first-of-type .questionary__contacts-input {
+      
+    }
+
+    .questionary__contacts-label {
+      margin-left: 54px;
     }
 
     .questionary__group-named {
-        width: 45%;
+        width: 40%;
+        padding-top: 80px;
+    }
+
+    .questionary__block-named {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .questionary__block-named:nth-child(2) .questionary__named-label {
+      padding-top: 22px;
+    }
+
+    .questionary__named-label {
+      margin-left: 10px;
+      padding-top: 23px;
+    }
+
+    .questionary__named-text {
+      padding-right: 113px;
+      margin-left: 19px;
+    }
+
+    .questionary__block-named:nth-child(2) {
+      margin-top: 50px;
+    }
+
+    .questionary__block-named:nth-child(1) .questionary__named-text {
+      margin-left: 18px;
+    }
+
+    .questionary__block-named:nth-child(2) .questionary__named-text {
+      padding: 13px 153px 15px 20px;
+      margin-left: 19px;
+    }
+
+    .questionary__group-app-wrapper {
+      width: 40%;
+      padding-top: 65px;
     }
 
     .questionary__group-app {
-        width: 45%;
+      margin-left: 23px;
+      margin-right: 22px;
+    }
+
+    .questionary__caption-app {
+      padding: 0;
+    }
+
+    .questionary__block-app {
+      margin-top: 31px;
+      margin-left: 42px;
+      margin-bottom: 35px;
+    }
+
+    .questionary__group-comment {
+      margin-top: 51px;
+      margin-left: 130px;
+      margin-right: 130px;
+      padding-left: 27px;
+      padding-right: 27px;
+      padding-bottom: 40px;
+    }
+
+    .questionary__comment-textarea {
+      margin-top: 8px;
+      padding-top: 13px;
+      padding-bottom: 51px;
+    }
+
+    .questionary__block-bottom {
+      padding-left: 110px;
+      margin-top: 65px;
+    }
+
+    .questionary__block-prompt {
+      margin-left: 326px;
+    }
+
+    .questionary__warning-desk {
+      display: initial;
     }
 }
